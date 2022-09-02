@@ -7,9 +7,7 @@ metadata:
 spec:
   containers:
   - image: centos
-    command:
-      - "sleep"
-      - "300"
+    command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 5 ; done"]
     imagePullPolicy: IfNotPresent
     name: sleeping-pod
   restartPolicy: Always
