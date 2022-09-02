@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sleeping-pod 
+  labels:
+    app: sleeping-pod
+spec:
+  containers:
+  - image: centos
+    command:
+      - "sleep"
+      - "300"
+    imagePullPolicy: IfNotPresent
+    name: sleeping-pod
+  restartPolicy: Always
